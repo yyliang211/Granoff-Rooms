@@ -1,0 +1,26 @@
+[
+    {
+        "id": 33,
+        "name": "Room 33",
+        "avail": true,
+        "imageName": "hitagi"
+    },
+    {
+        "id": 34,
+        "name": "Room 34",
+        "avail": false,
+        "imageName": "punch"
+    },
+    {
+        "id": 35,
+        "name": "Room 35",
+        "avail": true,
+        "imageName": "levi"
+    },
+    {
+        "id": 36,
+        "name": "Room 36",
+        "avail": true,
+        "imageName": "megumi"
+    }
+]

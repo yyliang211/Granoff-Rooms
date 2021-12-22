@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>222226120477-l66hvdnkggaoaj8os60hepeeglbin7cn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.222226120477-l66hvdnkggaoaj8os60hepeeglbin7cn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyACqN22BcaFLz-4jdCFpvgABiuTNiXDMTk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>222226120477</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>edu.tufts.yingyang.GranoffRooms</string>
+	<key>PROJECT_ID</key>
+	<string>granoff-rooms</string>
+	<key>STORAGE_BUCKET</key>
+	<string>granoff-rooms.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:222226120477:ios:3c2d22dd303fa5609fabf4</string>
+</dict>
+</plist>
