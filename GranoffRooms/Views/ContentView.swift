@@ -9,14 +9,8 @@ import SwiftUI
 import Firebase
 
 struct ContentView: View {
-    @AppStorage("isSignedIn") var isSignedIn = false
-    
     var body: some View {
-        if isSignedIn {
-            RoomList()
-        } else {
-            SignInView()
-        }
+        SignInView()
     }
 }
 

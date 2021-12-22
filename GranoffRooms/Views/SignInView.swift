@@ -12,33 +12,46 @@ import FirebaseFirestore
 import FirebaseStorage
 
 struct SignInView: View {
+//    @AppStorage("isSignedIn") var isSignedIn = false
     @StateObject var user = UserViewModel()
+//    @State private var isSignedIn = false
     @State private var showImagePicker = false
     @State private var image: UIImage?
 
     var body: some View {
-        VStack {
-            // Login title
-            Text("Login".uppercased())
-              .font(.title)
+        if user.isSignedIn == true {
+            RoomList()
+//            NavigationLink(
+//              destination:
+//            )
+//              { EmptyView() }
+        } else {
+            VStack {
+                
+                
+                // Login title
+                Text("Login".uppercased())
+                  .font(.title)
 
-            Spacer()
-              .frame(idealHeight: 0.1 * ScreenDimensions.height)
-              .fixedSize()
-            
-            profilePic
-            signInButton
+                Spacer()
+                  .frame(idealHeight: 0.1 * ScreenDimensions.height)
+                  .fixedSize()
+                
+                profilePic
+                signInButton
+            }
+            .alert(isPresented: $user.alert, content: {
+              Alert(
+                title: Text("Message"),
+                message: Text(user.alertMessage),
+                dismissButton: .destructive(Text("OK"))
+              )
+            })
+            .fullScreenCover(isPresented: $showImagePicker, onDismiss: nil) {
+                ImagePicker(image: $image)
+            }
         }
-        .alert(isPresented: $user.alert, content: {
-          Alert(
-            title: Text("Message"),
-            message: Text(user.alertMessage),
-            dismissButton: .destructive(Text("OK"))
-          )
-        })
-        .fullScreenCover(isPresented: $showImagePicker, onDismiss: nil) {
-            ImagePicker(image: $image)
-        }
+        
     }
     
     //User can choose their profile pic
@@ -71,7 +84,6 @@ struct SignInView: View {
     var signInButton : some View {
         Button {
             user.anonSignIn()
-            
         } label: {
             HStack {
                 Spacer()

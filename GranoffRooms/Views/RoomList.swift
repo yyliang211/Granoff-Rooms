@@ -8,32 +8,40 @@
 import SwiftUI
 
 struct RoomList: View {
-//    @EnvironmentObject var modelData: RoomListViewModel
+    @EnvironmentObject var modelData: RoomListViewModel
     @ObservedObject var roomListViewModel = RoomListViewModel()
-    @State private var showAvailOnly = true
+//    @State private var showAvailOnly = true
     @State private var selectedAvail: Bool = false
     @State private var selectedSortOption: String? = nil
     
-    var filteredRooms: [Room] {
-        modelData.rooms.filter { room in
-            (!showAvailOnly || room.avail)
-        }
-    }
+//    var filteredRooms: [Room] {
+//        modelData.rooms.filter { room in
+//            (!showAvailOnly || room.avail)
+//        }
+//    }
     
     var body: some View {
         NavigationView {
             List {
-                Toggle(isOn: $showAvailOnly) {
+                Toggle(isOn: $selectedAvail) {
                     Text("Available Rooms Only")
                 }
                 
-                ForEach(filteredRooms) { room in
+                List(roomListViewModel.rooms) { room in
                     NavigationLink {
                         RoomDetail(room: room)
                     } label: {
                         RoomRow(room: room)
                     }
                 }
+                
+//                ForEach(filteredRooms) { room in
+//                    NavigationLink {
+//                        RoomDetail(room: room)
+//                    } label: {
+//                        RoomRow(room: room)
+//                    }
+//                }
             }
             .navigationBarTitle("Practice Rooms")
             .toolbar {

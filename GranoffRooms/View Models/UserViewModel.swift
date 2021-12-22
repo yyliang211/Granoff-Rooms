@@ -9,9 +9,17 @@ import SwiftUI
 import Firebase
 
 class UserViewModel: ObservableObject {
-    @AppStorage("isSignedIn") var isSignedIn = false
+    @Published var isSignedIn = false
     @Published var alert = false
     @Published var alertMessage = ""
+    
+//    func getSignInStatus() -> Bool {
+//        return self.isSignedIn
+//    }
+//
+//    func toggleSignInStatus() {
+//        isSignedIn = !isSignedIn
+//    }
 
     private func showAlertMessage(message: String) {
         alertMessage = message
