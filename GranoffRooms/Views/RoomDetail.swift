@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct RoomDetail: View {
-    @EnvironmentObject var modelData: RoomListViewModel
+    @EnvironmentObject var roomListViewModel: RoomListViewModel
     var room: Room
     
     var roomIndex: Int {
-        modelData.rooms.firstIndex(where: {$0.id == room.id})!
+        roomListViewModel.rooms.firstIndex(where: {$0.id == room.id})!
     }
     
     var body: some View {
         VStack(alignment: .center) {
             header
-            
-            CheckinButton(isSet: $modelData.rooms[roomIndex].avail)
+            CheckinButton(isSet: $roomListViewModel.rooms[roomIndex].avail)
         }
         .padding()
         .navigationTitle(room.name)
@@ -37,15 +36,6 @@ struct RoomDetail: View {
         }
     }
 }
-
-//struct Header: View {
-//    @EnvironmentObject var modelData: ModelData
-//    var room: Room
-//
-//    var body: some View {
-//
-//    }
-//}
 
 struct RoomDetail_Previews: PreviewProvider {
     static let modelData = RoomListViewModel()

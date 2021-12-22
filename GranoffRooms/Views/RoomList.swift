@@ -13,12 +13,6 @@ struct RoomList: View {
     @State private var onlyAvailSelected: Bool = false
     @State private var selectedSortOption: String? = nil
     
-//    var filteredRooms: [Room] {
-//        modelData.rooms.filter { room in
-//            (!showAvailOnly || room.avail)
-//        }
-//    }
-    
     private func filter() {
         let query = roomListViewModel.query(onlyAvail: onlyAvailSelected, sortOption: selectedSortOption)
         roomListViewModel.filter(query: query)
@@ -42,25 +36,17 @@ struct RoomList: View {
                         RoomRow(room: room)
                     }
                 }
-                
-//                ForEach(filteredRooms) { room in
-//                    NavigationLink {
-//                        RoomDetail(room: room)
-//                    } label: {
-//                        RoomRow(room: room)
-//                    }
-//                }
             }
             .navigationBarTitle("Practice Rooms")
-            .toolbar {
-              ToolbarItem(placement: .navigationBarTrailing) {
-                  Button {
-
-                  } label: {
-                      Icon(image: Image("hitagi"))
-                  }
-              }
-            }
+//            .toolbar {
+//              ToolbarItem(placement: .navigationBarTrailing) {
+//                  Button {
+//
+//                  } label: {
+//                      Icon(image: Image("hitagi"))
+//                  }
+//              }
+//            }
             .onAppear {
               filter()
             }
