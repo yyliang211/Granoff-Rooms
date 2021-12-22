@@ -21,14 +21,8 @@ struct SignInView: View {
     var body: some View {
         if user.isSignedIn == true {
             RoomList()
-//            NavigationLink(
-//              destination:
-//            )
-//              { EmptyView() }
         } else {
             VStack {
-                
-                
                 // Login title
                 Text("Login".uppercased())
                   .font(.title)

@@ -11,10 +11,10 @@ import Firebase
 import FirebaseFirestoreSwift
 
 struct Room: Hashable, Codable, Identifiable {
-    var id: String = UUID().uuidString
+//    var id: String = UUID().uuidString
     var reference: DocumentReference?
     
-    var num: Int
+    var id: Int
     var avail: Bool
     var name: String
 //    var description: String

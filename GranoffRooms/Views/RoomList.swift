@@ -10,8 +10,7 @@ import SwiftUI
 struct RoomList: View {
     @EnvironmentObject var modelData: RoomListViewModel
     @ObservedObject var roomListViewModel = RoomListViewModel()
-//    @State private var showAvailOnly = true
-    @State private var selectedAvail: Bool = false
+    @State private var onlyAvailSelected: Bool = false
     @State private var selectedSortOption: String? = nil
     
 //    var filteredRooms: [Room] {
@@ -20,14 +19,23 @@ struct RoomList: View {
 //        }
 //    }
     
+    private func filter() {
+        let query = roomListViewModel.query(onlyAvail: onlyAvailSelected, sortOption: selectedSortOption)
+        roomListViewModel.filter(query: query)
+    }
+    
     var body: some View {
         NavigationView {
             List {
-                Toggle(isOn: $selectedAvail) {
+                Toggle(isOn: $onlyAvailSelected) {
                     Text("Available Rooms Only")
                 }
+                .onChange(of: onlyAvailSelected) { value in
+                    print("avail selected is currently \(onlyAvailSelected)")
+                    filter()
+                }
                 
-                List(roomListViewModel.rooms) { room in
+                ForEach(roomListViewModel.rooms) { room in
                     NavigationLink {
                         RoomDetail(room: room)
                     } label: {
@@ -54,8 +62,7 @@ struct RoomList: View {
               }
             }
             .onAppear {
-              let query = roomListViewModel.query(avail: selectedAvail, sortOption: selectedSortOption)
-              roomListViewModel.subscribe(to: query)
+              filter()
             }
             .onDisappear {
                 roomListViewModel.unsubscribe()

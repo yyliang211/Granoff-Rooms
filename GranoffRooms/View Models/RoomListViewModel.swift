@@ -58,18 +58,20 @@ class RoomListViewModel: ObservableObject {
         subscribe(to: query)
     }
 
-    func query(avail: Bool?, sortOption: String?) -> Query {
+    func query(onlyAvail: Bool?, sortOption: String?) -> Query {
         var filteredQuery = baseQuery
-
-        if let avail = avail {
-            filteredQuery = filteredQuery.whereField("avail", isEqualTo: avail)
-        }
-
+        
         if let sortOption = sortOption {
             filteredQuery = filteredQuery.order(by: sortOption)
         }
+        
+        if let onlyAvail = onlyAvail {
+            if onlyAvail == true {
+                return filteredQuery.whereField("avail", isEqualTo: onlyAvail).order(by: "name")
+            }
+        }
 
-        return filteredQuery.order(by: "avail", descending: true)
+        return filteredQuery.order(by: "avail", descending: true).order(by: "name")
     }
     
     // function called when error occurs
