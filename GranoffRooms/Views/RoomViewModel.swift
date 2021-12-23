@@ -6,6 +6,7 @@
 //
 
 import Firebase
+import FirebaseFirestore
 import Combine
 import Foundation
 
@@ -26,6 +27,8 @@ class RoomViewModel: ObservableObject {
     }
     
     func setAvail() {
+        
+        self.avail = !avail
         let roomRef = room.reference
         if let roomRef = roomRef {
             roomRef.updateData(["avail": avail]) { err in
@@ -33,6 +36,7 @@ class RoomViewModel: ObservableObject {
                     print("Error updating document \(err)")
                 } else {
                     print("Document successfully updated")
+                    print("Avail: \(self.avail)")
                 }
             }
         } else {
