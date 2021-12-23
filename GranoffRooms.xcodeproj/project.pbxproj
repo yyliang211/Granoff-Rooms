@@ -21,6 +21,7 @@
 		DCBC36EB277305000050E0CF /* ScreenDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC36EA277304FF0050E0CF /* ScreenDimensions.swift */; };
 		DCBC36EE27731A4D0050E0CF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DCBC36ED27731A4D0050E0CF /* FirebaseDatabase */; };
 		DCBC36F027739EAB0050E0CF /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = DCBC36EF27739EAB0050E0CF /* FirebaseFirestoreSwift-Beta */; };
+		DCC1556E2773DF7F0047F6A9 /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1556D2773DF7F0047F6A9 /* RoomViewModel.swift */; };
 		DCC7D3CF27717C430016B379 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */; };
 		DCC7D3D027717C430016B379 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */; };
 		DCC7D3D127717C430016B379 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */; };
@@ -68,6 +69,7 @@
 		DCBC36D82772B3360050E0CF /* RoomListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewModel.swift; sourceTree = "<group>"; };
 		DCBC36E82772FF6E0050E0CF /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		DCBC36EA277304FF0050E0CF /* ScreenDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenDimensions.swift; sourceTree = "<group>"; };
+		DCC1556D2773DF7F0047F6A9 /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoomViewModel.swift; path = GranoffRooms/Views/RoomViewModel.swift; sourceTree = SOURCE_ROOT; };
 		DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCC7D3FA2771C9100016B379 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		DCDCC02D277138BB00CE42CD /* Granoff Rooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Granoff Rooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 		DCBC36EC277319A50050E0CF /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				DCC1556D2773DF7F0047F6A9 /* RoomViewModel.swift */,
 				DCBC36E82772FF6E0050E0CF /* UserViewModel.swift */,
 				DCBC36D82772B3360050E0CF /* RoomListViewModel.swift */,
 			);
@@ -388,6 +391,7 @@
 				DCDCC033277138BB00CE42CD /* ContentView.swift in Sources */,
 				DCBC36D92772B3360050E0CF /* RoomListViewModel.swift in Sources */,
 				DC0A9F58277266E000D191B5 /* ImagePicker.swift in Sources */,
+				DCC1556E2773DF7F0047F6A9 /* RoomViewModel.swift in Sources */,
 				DCBC36E92772FF6F0050E0CF /* UserViewModel.swift in Sources */,
 				DCDCC031277138BB00CE42CD /* GranoffRoomsApp.swift in Sources */,
 				DCF3615C277149AC00FC3E9C /* CheckinButton.swift in Sources */,

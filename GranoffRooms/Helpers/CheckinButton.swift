@@ -9,10 +9,12 @@ import SwiftUI
 
 struct CheckinButton: View {
     @Binding var isSet: Bool
+//    var room: Room
     
     var body: some View {
         Button {
             isSet.toggle()
+//            room.setAvail()
         } label: {
             if isSet {
                 Text("Check-In")

@@ -13,7 +13,7 @@ import FirebaseFirestore
 class RoomListViewModel: ObservableObject {
     @Published var alert = false
     @Published var alertMessage = ""
-    @Published var rooms = [Room]()
+    @Published var rooms: [Room] = []
     private var db = Firestore.firestore()
     private var listener: ListenerRegistration?
     private let baseQuery: Query = Firestore.firestore().collection("rooms").limit(to: 100)
