@@ -75,7 +75,7 @@
 		DCC155722774325C0047F6A9 /* NavigationBarViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBarViews.swift; path = GranoffRooms/Model/NavigationBarViews.swift; sourceTree = SOURCE_ROOT; };
 		DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCC7D3FA2771C9100016B379 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		DCDCC02D277138BB00CE42CD /* Granoff Rooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Granoff Rooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCDCC02D277138BB00CE42CD /* GranoffRooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GranoffRooms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDCC030277138BB00CE42CD /* GranoffRoomsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GranoffRoomsApp.swift; sourceTree = "<group>"; };
 		DCDCC032277138BB00CE42CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DCDCC034277138C000CE42CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 		DCDCC02E277138BB00CE42CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DCDCC02D277138BB00CE42CD /* Granoff Rooms.app */,
+				DCDCC02D277138BB00CE42CD /* GranoffRooms.app */,
 				DCDCC03D277138C100CE42CD /* GranoffRoomsTests.xctest */,
 				DCDCC047277138C100CE42CD /* GranoffRoomsUITests.xctest */,
 			);
@@ -267,7 +267,7 @@
 				DCC155702774317D0047F6A9 /* Introspect */,
 			);
 			productName = GranoffRooms;
-			productReference = DCDCC02D277138BB00CE42CD /* Granoff Rooms.app */;
+			productReference = DCDCC02D277138BB00CE42CD /* GranoffRooms.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DCDCC03C277138C100CE42CD /* GranoffRoomsTests */ = {
@@ -581,7 +581,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.tufts.yingyang.GranoffRooms;
-				PRODUCT_NAME = "Granoff Rooms";
+				PRODUCT_NAME = GranoffRooms;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -611,7 +611,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.tufts.yingyang.GranoffRooms;
-				PRODUCT_NAME = "Granoff Rooms";
+				PRODUCT_NAME = GranoffRooms;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -13,20 +13,22 @@ import FirebaseFirestoreSwift
 
 struct Room: Hashable, Codable, Identifiable {
     
-    init(id: Int, avail: Bool, name: String, imageName: String) {
+    init(id: String, avail: Bool, name: String, imageName: String, description: String) {
         self.id = id
         self.avail = avail
         self.name = name
         self.imageName = imageName
+        self.description = description
     }
     
 //    var id: String = UUID().uuidString
-    var id: Int
+//    var id: Int
+    var id: String
     var reference: DocumentReference?
     
     var avail: Bool
     var name: String
-//    var description: String
+    var description: String
     
     private var imageName: String
     var image: Image {

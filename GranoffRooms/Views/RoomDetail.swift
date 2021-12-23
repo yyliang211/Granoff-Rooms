@@ -24,28 +24,41 @@ struct RoomDetail: View {
     }
     
     var body: some View {
-        VStack(alignment: .center) {
-            header
-          CheckinButton(isSet: $avail)
-                .onChange(of: avail) {newAvail in
-                    viewModel.setAvail()
+        
+        ScrollView {
+            VStack(alignment: .center) {
+                header
+                    .padding([.top, .leading, .trailing])
+                CheckinButton(isSet: $avail)
+                    .onChange(of: avail) {newAvail in
+                        viewModel.setAvail()
+                    }
+                    .padding()
+                Divider()
+                HStack {
+                    Text(room.description)
+                        .font(.headline)
+                        .padding(.leading)
+                    Spacer()
                 }
-                .padding()
-            Divider()
-            HStack{
-                Text("Description")
-                Spacer()
+                HStack {
+                    Image(room.name)
+                        .resizable()
+                        .scaledToFit()
+                        .padding()
+                }
+                
             }
-            
-        }
-        .padding()
+//            .padding()
 //            .overlay(
 //                Icon(image: room.image)
-//                    .frame(width: 40, height: 40)
+//                    .frame(width: 50, height: 50)
 //                    .padding(.trailing, 20)
 //                    .offset(x: 0, y: -50)
 //                , alignment: .topTrailing)
-        .navigationTitle(room.name)
+//            .navigationTitle(room.name)
+//            .navigationBarTitleDisplayMode(.inline)
+        }
 //        .toolbar {
 //            ToolbarItem(placement: .navigationBarTrailing ) {
 //                Button {
@@ -78,7 +91,7 @@ struct RoomDetail_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        let room = Room(id: 33, avail: true, name: "Room 033", imageName: "Megumi")
+        let room = Room(id: "33", avail: true, name: "Room 033", imageName: "Megumi", description: "desc")
         RoomDetail(room: room)
             .preferredColorScheme(.dark)
         

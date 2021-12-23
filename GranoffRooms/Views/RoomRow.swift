@@ -19,7 +19,7 @@ struct RoomRow: View {
             
             Text(room.name)
                 .font(.title)
-                .fontWeight(.medium)
+                .fontWeight(.regular)
                 .padding(.leading)
             
             Spacer()
@@ -39,7 +39,7 @@ struct RoomRow_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        let room = Room(id: 33, avail: true, name: "Room 033", imageName: "Levi")
+        let room = Room(id: "33", avail: true, name: "Room 033", imageName: "Levi", description: "desc")
         Group {
             RoomRow(room: room)
                 .preferredColorScheme(.dark)
