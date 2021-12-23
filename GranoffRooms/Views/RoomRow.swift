@@ -18,7 +18,9 @@ struct RoomRow: View {
                 .clipped()
             
             Text(room.name)
-                .font(.custom("Proxima Nova", size: 30))
+                .font(.title)
+                .fontWeight(.medium)
+                .padding(.leading)
             
             Spacer()
             
@@ -33,13 +35,24 @@ struct RoomRow: View {
 }
 
 struct RoomRow_Previews: PreviewProvider {
-    static var rooms = RoomListViewModel().rooms
+//    static var rooms = RoomListViewModel().rooms
+    
     
     static var previews: some View {
+        let room = Room(id: 33, avail: true, name: "Room 033", imageName: "Levi")
         Group {
-            RoomRow(room: rooms[0])
-            RoomRow(room: rooms[1])
+            RoomRow(room: room)
+                .preferredColorScheme(.dark)
+            RoomRow(room: room)
+                .preferredColorScheme(.light)
         }
         .previewLayout(.fixed(width: 300, height: 70))
+        
+        
+//        Group {
+//            RoomRow(room: rooms[0])
+//            RoomRow(room: rooms[1])
+//        }
+//        .previewLayout(.fixed(width: 300, height: 70))
     }
 }

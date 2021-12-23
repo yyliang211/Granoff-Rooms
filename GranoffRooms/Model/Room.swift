@@ -19,6 +19,7 @@ struct Room: Hashable, Codable, Identifiable {
         self.name = name
         self.imageName = imageName
     }
+    
 //    var id: String = UUID().uuidString
     var id: Int
     var reference: DocumentReference?

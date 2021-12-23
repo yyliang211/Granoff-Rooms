@@ -33,7 +33,7 @@ struct RoomDetail: View {
                 .padding()
             Divider()
             HStack{
-                Text("Description:")
+                Text("Description")
                 Spacer()
             }
             
@@ -66,8 +66,7 @@ struct RoomDetail: View {
                 .frame(width: 80, height: 80)
                 .padding(.horizontal)
             Text(room.name)
-                .font(.custom("Proxima Nova", size: 50))
-                .fontWeight(.semibold)
+                .font(.largeTitle)
                 .multilineTextAlignment(.center)
         }
     }

@@ -25,7 +25,8 @@ struct SignInView: View {
             VStack {
                 // Login title
                 Text("Login".uppercased())
-                  .font(.title)
+                    .font(.title)
+                    .fontWeight(.medium)
 
                 Spacer()
                   .frame(idealHeight: 0.1 * ScreenDimensions.height)
@@ -69,7 +70,7 @@ struct SignInView: View {
                 }
             }
             .overlay {
-                Circle().stroke(.black, lineWidth: 2)
+                Circle().stroke(Color.black, lineWidth: 2)
             }
         }
     }
@@ -81,16 +82,17 @@ struct SignInView: View {
         } label: {
             HStack {
                 Spacer()
-                Text("Sign In Anonymously")
-                    .font(.custom("Proxima Nova", size: 20))
+                Text("Guest Login")
+                    .font(.title3)
                     .padding()
                     .foregroundColor(.white)
                 Spacer()
             }
             .background(.blue)
-            .cornerRadius(10)
+            .cornerRadius(15)
         }
-        .padding()
+        .padding(.vertical)
+        .padding(.horizontal, 0.3 * ScreenDimensions.width)
     }
     
 
