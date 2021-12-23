@@ -15,15 +15,17 @@ struct CheckinButton: View {
             isSet.toggle()
         } label: {
             if isSet {
-                Text("Check-In")
-                .font(.custom("Proxima Nova", size: 40))
+                Text("Check In")
+//                .font(.custom("Proxima Nova", size: 40))
+                .font(.largeTitle)
                 .padding()
                 .foregroundColor(.white)
                 .background(Color("myOrange"))
                 .cornerRadius(30)
             } else {
-                Text("Check-Out")
-                .font(.custom("Proxima Nova", size: 40))
+                Text("Check Out")
+//                .font(.custom("Proxima Nova", size: 40))
+                .font(.largeTitle)
                 .padding()
                 .foregroundColor(.white)
                 .background(Color("myGray"))

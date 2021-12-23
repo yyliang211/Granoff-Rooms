@@ -67,6 +67,7 @@ struct RoomDetail: View {
                 .padding(.horizontal)
             Text(room.name)
                 .font(.largeTitle)
+                .fontWeight(.medium)
                 .multilineTextAlignment(.center)
         }
     }
