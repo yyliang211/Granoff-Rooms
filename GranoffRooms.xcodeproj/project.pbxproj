@@ -22,6 +22,8 @@
 		DCBC36EE27731A4D0050E0CF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DCBC36ED27731A4D0050E0CF /* FirebaseDatabase */; };
 		DCBC36F027739EAB0050E0CF /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = DCBC36EF27739EAB0050E0CF /* FirebaseFirestoreSwift-Beta */; };
 		DCC1556E2773DF7F0047F6A9 /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1556D2773DF7F0047F6A9 /* RoomViewModel.swift */; };
+		DCC155712774317D0047F6A9 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = DCC155702774317D0047F6A9 /* Introspect */; };
+		DCC155732774325C0047F6A9 /* NavigationBarViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC155722774325C0047F6A9 /* NavigationBarViews.swift */; };
 		DCC7D3CF27717C430016B379 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */; };
 		DCC7D3D027717C430016B379 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */; };
 		DCC7D3D127717C430016B379 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */; };
@@ -70,6 +72,7 @@
 		DCBC36E82772FF6E0050E0CF /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		DCBC36EA277304FF0050E0CF /* ScreenDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenDimensions.swift; sourceTree = "<group>"; };
 		DCC1556D2773DF7F0047F6A9 /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoomViewModel.swift; path = GranoffRooms/Views/RoomViewModel.swift; sourceTree = SOURCE_ROOT; };
+		DCC155722774325C0047F6A9 /* NavigationBarViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBarViews.swift; path = GranoffRooms/Model/NavigationBarViews.swift; sourceTree = SOURCE_ROOT; };
 		DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCC7D3FA2771C9100016B379 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		DCDCC02D277138BB00CE42CD /* Granoff Rooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Granoff Rooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +98,7 @@
 				DC0A9F562772620D00D191B5 /* FirebaseFirestore in Frameworks */,
 				DCC7D3D427717E080016B379 /* FirebaseAnalytics in Frameworks */,
 				DCBC36F027739EAB0050E0CF /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				DCC155712774317D0047F6A9 /* Introspect in Frameworks */,
 				DC0A9F5A27726F7800D191B5 /* FirebaseStorage in Frameworks */,
 				DCC7D3D627717E080016B379 /* FirebaseAuth in Frameworks */,
 			);
@@ -137,6 +141,7 @@
 		DC48C5C42771596E00C2267E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DCC155722774325C0047F6A9 /* NavigationBarViews.swift */,
 				DCF3615B277149AC00FC3E9C /* CheckinButton.swift */,
 				DCF361592771410E00FC3E9C /* Icon.swift */,
 			);
@@ -259,6 +264,7 @@
 				DC0A9F5927726F7800D191B5 /* FirebaseStorage */,
 				DCBC36ED27731A4D0050E0CF /* FirebaseDatabase */,
 				DCBC36EF27739EAB0050E0CF /* FirebaseFirestoreSwift-Beta */,
+				DCC155702774317D0047F6A9 /* Introspect */,
 			);
 			productName = GranoffRooms;
 			productReference = DCDCC02D277138BB00CE42CD /* Granoff Rooms.app */;
@@ -334,6 +340,7 @@
 			mainGroup = DCDCC024277138BB00CE42CD;
 			packageReferences = (
 				DCC7D3D227717E080016B379 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DCC1556F2774317C0047F6A9 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = DCDCC02E277138BB00CE42CD /* Products */;
 			projectDirPath = "";
@@ -387,6 +394,7 @@
 				DC48C5D12771608C00C2267E /* RoomList.swift in Sources */,
 				DCC7D3FB2771C9110016B379 /* SignInView.swift in Sources */,
 				DC48C5CD27715BE900C2267E /* RoomRow.swift in Sources */,
+				DCC155732774325C0047F6A9 /* NavigationBarViews.swift in Sources */,
 				DCBC36EB277305000050E0CF /* ScreenDimensions.swift in Sources */,
 				DCDCC033277138BB00CE42CD /* ContentView.swift in Sources */,
 				DCBC36D92772B3360050E0CF /* RoomListViewModel.swift in Sources */,
@@ -728,6 +736,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DCC1556F2774317C0047F6A9 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
 		DCC7D3D227717E080016B379 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -758,6 +774,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DCC7D3D227717E080016B379 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		DCC155702774317D0047F6A9 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCC1556F2774317C0047F6A9 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 		DCC7D3D327717E080016B379 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

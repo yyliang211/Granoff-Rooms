@@ -5,16 +5,24 @@
 //  Created by Yingyang Liang on 12/20/21.
 //
 
-import Foundation
+//import Foundation
 import SwiftUI
 import Firebase
+import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 struct Room: Hashable, Codable, Identifiable {
+    
+    init(id: Int, avail: Bool, name: String, imageName: String) {
+        self.id = id
+        self.avail = avail
+        self.name = name
+        self.imageName = imageName
+    }
 //    var id: String = UUID().uuidString
+    var id: Int
     var reference: DocumentReference?
     
-    var id: Int
     var avail: Bool
     var name: String
 //    var description: String

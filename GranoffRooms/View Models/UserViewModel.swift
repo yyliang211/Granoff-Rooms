@@ -12,14 +12,6 @@ class UserViewModel: ObservableObject {
     @Published var isSignedIn = false
     @Published var alert = false
     @Published var alertMessage = ""
-    
-//    func getSignInStatus() -> Bool {
-//        return self.isSignedIn
-//    }
-//
-//    func toggleSignInStatus() {
-//        isSignedIn = !isSignedIn
-//    }
 
     private func showAlertMessage(message: String) {
         alertMessage = message

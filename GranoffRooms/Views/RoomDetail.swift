@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import Introspect
 
 struct RoomDetail: View {
 //    @EnvironmentObject var roomListViewModel: RoomListViewModel
 //    @ObservedObject var roomListViewModel: RoomListViewModel
     @ObservedObject var viewModel: RoomViewModel
     @State var avail: Bool
+    @State private var lastHostingView: UIView!
     
     var room: Room
     
@@ -21,21 +23,39 @@ struct RoomDetail: View {
         avail = room.avail
     }
     
-//    var roomIndex: Int {
-//        roomListViewModel.rooms.firstIndex(where: {$0.id == room.id})!
-//    }
-    
     var body: some View {
         VStack(alignment: .center) {
             header
-//            CheckinButton(isSet: $roomListViewModel.rooms[roomIndex].avail)
-            CheckinButton(isSet: $avail)
+          CheckinButton(isSet: $avail)
                 .onChange(of: avail) {newAvail in
                     viewModel.setAvail()
                 }
+                .padding()
+            Divider()
+            HStack{
+                Text("Description:")
+                Spacer()
+            }
+            
         }
         .padding()
+//            .overlay(
+//                Icon(image: room.image)
+//                    .frame(width: 40, height: 40)
+//                    .padding(.trailing, 20)
+//                    .offset(x: 0, y: -50)
+//                , alignment: .topTrailing)
         .navigationTitle(room.name)
+//        .toolbar {
+//            ToolbarItem(placement: .navigationBarTrailing ) {
+//                Button {
+//                    print("navbar trailing button pressed")
+//                } label: {
+//                    Icon(image: room.image)
+//                        .frame(width: 20, height: 20)
+//                }
+//            }
+//        }
         
     }
     
@@ -54,14 +74,19 @@ struct RoomDetail: View {
 }
 
 struct RoomDetail_Previews: PreviewProvider {
-    static let roomListViewModel = RoomListViewModel()
+//    static let roomListViewModel = RoomListViewModel()
+    
     
     static var previews: some View {
-        RoomDetail(room: roomListViewModel.rooms[0])
+        let room = Room(id: 33, avail: true, name: "Room 033", imageName: "Megumi")
+        RoomDetail(room: room)
             .preferredColorScheme(.dark)
-            .environmentObject(roomListViewModel)
-        RoomDetail(room: roomListViewModel.rooms[0])
-            .preferredColorScheme(.light)
-            .environmentObject(roomListViewModel)
+        
+//        RoomDetail(room: roomListViewModel.rooms[0])
+//            .preferredColorScheme(.dark)
+//            .environmentObject(roomListViewModel)
+//        RoomDetail(room: roomListViewModel.rooms[0])
+//            .preferredColorScheme(.light)
+//            .environmentObject(roomListViewModel)
     }
 }
