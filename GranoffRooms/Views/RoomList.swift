@@ -56,7 +56,7 @@ struct RoomList: View {
             }
             
         }
-        .navigationViewStyle(DefaultNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

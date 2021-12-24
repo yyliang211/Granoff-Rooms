@@ -75,13 +75,16 @@ struct RoomDetail: View {
     
     var header: some View {
         HStack(alignment: .center) {
-            Icon(image: room.image)
-                .frame(width: 80, height: 80)
-                .padding(.horizontal)
             Text(room.name)
                 .font(.largeTitle)
                 .fontWeight(.medium)
-                .multilineTextAlignment(.center)
+            Spacer()
+                .frame(idealWidth: 0.05 * ScreenDimensions.width)
+                .fixedSize()
+            Icon(image: room.image)
+                .frame(width: 80, height: 80)
+                .padding(.horizontal)
+            
         }
     }
 }

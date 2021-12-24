@@ -11,7 +11,6 @@
 		DC0A9F58277266E000D191B5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0A9F57277266E000D191B5 /* ImagePicker.swift */; };
 		DC0A9F5A27726F7800D191B5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DC0A9F5927726F7800D191B5 /* FirebaseStorage */; };
 		DC48C5C22771595400C2267E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48C5C12771595400C2267E /* Room.swift */; };
-		DC48C5CB27715BA300C2267E /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48C5CA27715BA300C2267E /* ModelData.swift */; };
 		DC48C5CD27715BE900C2267E /* RoomRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48C5CC27715BE900C2267E /* RoomRow.swift */; };
 		DC48C5CF27715C8A00C2267E /* roomData.json in Resources */ = {isa = PBXBuildFile; fileRef = DC48C5CE27715C8A00C2267E /* roomData.json */; };
 		DC48C5D12771608C00C2267E /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48C5D02771608C00C2267E /* RoomList.swift */; };
@@ -22,7 +21,6 @@
 		DCBC36EE27731A4D0050E0CF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DCBC36ED27731A4D0050E0CF /* FirebaseDatabase */; };
 		DCBC36F027739EAB0050E0CF /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = DCBC36EF27739EAB0050E0CF /* FirebaseFirestoreSwift-Beta */; };
 		DCC1556E2773DF7F0047F6A9 /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1556D2773DF7F0047F6A9 /* RoomViewModel.swift */; };
-		DCC155712774317D0047F6A9 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = DCC155702774317D0047F6A9 /* Introspect */; };
 		DCC155732774325C0047F6A9 /* NavigationBarViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC155722774325C0047F6A9 /* NavigationBarViews.swift */; };
 		DCC7D3CF27717C430016B379 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */; };
 		DCC7D3D027717C430016B379 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */; };
@@ -32,6 +30,7 @@
 		DCC7D3FB2771C9110016B379 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7D3FA2771C9100016B379 /* SignInView.swift */; };
 		DCC7D3FC2771C9120016B379 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7D3FA2771C9100016B379 /* SignInView.swift */; };
 		DCC7D3FD2771C9120016B379 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7D3FA2771C9100016B379 /* SignInView.swift */; };
+		DCD6AAC02775563600622B8A /* CannotCheckInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6AABF2775563500622B8A /* CannotCheckInButton.swift */; };
 		DCDCC031277138BB00CE42CD /* GranoffRoomsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC030277138BB00CE42CD /* GranoffRoomsApp.swift */; };
 		DCDCC033277138BB00CE42CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC032277138BB00CE42CD /* ContentView.swift */; };
 		DCDCC035277138C000CE42CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC034277138C000CE42CD /* Assets.xcassets */; };
@@ -63,7 +62,6 @@
 /* Begin PBXFileReference section */
 		DC0A9F57277266E000D191B5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DC48C5C12771595400C2267E /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
-		DC48C5CA27715BA300C2267E /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		DC48C5CC27715BE900C2267E /* RoomRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRow.swift; sourceTree = "<group>"; };
 		DC48C5CE27715C8A00C2267E /* roomData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = roomData.json; sourceTree = "<group>"; };
 		DC48C5D02771608C00C2267E /* RoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomList.swift; sourceTree = "<group>"; };
@@ -75,6 +73,7 @@
 		DCC155722774325C0047F6A9 /* NavigationBarViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBarViews.swift; path = GranoffRooms/Model/NavigationBarViews.swift; sourceTree = SOURCE_ROOT; };
 		DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCC7D3FA2771C9100016B379 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		DCD6AABF2775563500622B8A /* CannotCheckInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannotCheckInButton.swift; sourceTree = "<group>"; };
 		DCDCC02D277138BB00CE42CD /* GranoffRooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GranoffRooms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDCC030277138BB00CE42CD /* GranoffRoomsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GranoffRoomsApp.swift; sourceTree = "<group>"; };
 		DCDCC032277138BB00CE42CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,7 +97,6 @@
 				DC0A9F562772620D00D191B5 /* FirebaseFirestore in Frameworks */,
 				DCC7D3D427717E080016B379 /* FirebaseAnalytics in Frameworks */,
 				DCBC36F027739EAB0050E0CF /* FirebaseFirestoreSwift-Beta in Frameworks */,
-				DCC155712774317D0047F6A9 /* Introspect in Frameworks */,
 				DC0A9F5A27726F7800D191B5 /* FirebaseStorage in Frameworks */,
 				DCC7D3D627717E080016B379 /* FirebaseAuth in Frameworks */,
 			);
@@ -132,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				DC48C5C12771595400C2267E /* Room.swift */,
-				DC48C5CA27715BA300C2267E /* ModelData.swift */,
 				DCBC36EA277304FF0050E0CF /* ScreenDimensions.swift */,
 			);
 			path = Model;
@@ -144,6 +141,7 @@
 				DCC155722774325C0047F6A9 /* NavigationBarViews.swift */,
 				DCF3615B277149AC00FC3E9C /* CheckinButton.swift */,
 				DCF361592771410E00FC3E9C /* Icon.swift */,
+				DCD6AABF2775563500622B8A /* CannotCheckInButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -264,7 +262,6 @@
 				DC0A9F5927726F7800D191B5 /* FirebaseStorage */,
 				DCBC36ED27731A4D0050E0CF /* FirebaseDatabase */,
 				DCBC36EF27739EAB0050E0CF /* FirebaseFirestoreSwift-Beta */,
-				DCC155702774317D0047F6A9 /* Introspect */,
 			);
 			productName = GranoffRooms;
 			productReference = DCDCC02D277138BB00CE42CD /* GranoffRooms.app */;
@@ -392,6 +389,7 @@
 				DCF3615A2771410E00FC3E9C /* Icon.swift in Sources */,
 				DC48C5C22771595400C2267E /* Room.swift in Sources */,
 				DC48C5D12771608C00C2267E /* RoomList.swift in Sources */,
+				DCD6AAC02775563600622B8A /* CannotCheckInButton.swift in Sources */,
 				DCC7D3FB2771C9110016B379 /* SignInView.swift in Sources */,
 				DC48C5CD27715BE900C2267E /* RoomRow.swift in Sources */,
 				DCC155732774325C0047F6A9 /* NavigationBarViews.swift in Sources */,
@@ -403,7 +401,6 @@
 				DCBC36E92772FF6F0050E0CF /* UserViewModel.swift in Sources */,
 				DCDCC031277138BB00CE42CD /* GranoffRoomsApp.swift in Sources */,
 				DCF3615C277149AC00FC3E9C /* CheckinButton.swift in Sources */,
-				DC48C5CB27715BA300C2267E /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,11 +771,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DCC7D3D227717E080016B379 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseFirestoreSwift-Beta";
-		};
-		DCC155702774317D0047F6A9 /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DCC1556F2774317C0047F6A9 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
 		};
 		DCC7D3D327717E080016B379 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
