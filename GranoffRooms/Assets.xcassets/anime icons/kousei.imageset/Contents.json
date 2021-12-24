@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "kousei-1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "kousei-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

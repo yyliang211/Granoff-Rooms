@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "kaori-1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "kaori-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
