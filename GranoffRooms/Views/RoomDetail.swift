@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Introspect
 
 struct RoomDetail: View {
 //    @EnvironmentObject var roomListViewModel: RoomListViewModel
