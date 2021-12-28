@@ -31,6 +31,10 @@ class UserViewModel: ObservableObject {
             }
         }
     }
+    
+    private func getCurrentUserID() -> String? {
+        return Auth.auth().currentUser?.uid
+    }
 
     func logout() {
         do {

@@ -35,9 +35,6 @@ struct RoomRow: View {
 }
 
 struct RoomRow_Previews: PreviewProvider {
-//    static var rooms = RoomListViewModel().rooms
-    
-    
     static var previews: some View {
         let room = Room(id: "33", avail: true, name: "Room 033", imageName: "Levi", description: "desc")
         Group {
@@ -47,12 +44,5 @@ struct RoomRow_Previews: PreviewProvider {
                 .preferredColorScheme(.light)
         }
         .previewLayout(.fixed(width: 300, height: 70))
-        
-        
-//        Group {
-//            RoomRow(room: rooms[0])
-//            RoomRow(room: rooms[1])
-//        }
-//        .previewLayout(.fixed(width: 300, height: 70))
     }
 }

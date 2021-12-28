@@ -35,7 +35,7 @@ class RoomViewModel: ObservableObject {
                 if let err = err {
                     print("Error updating document \(err)")
                 } else {
-                    print("Document successfully updated")
+                    print("Document avail successfully updated")
                     print("Avail: \(self.avail)")
                 }
             }

@@ -12,21 +12,24 @@ import FirebaseFirestore
 import FirebaseStorage
 
 struct SignInView: View {
-//    @AppStorage("isSignedIn") var isSignedIn = false
     @StateObject var user = UserViewModel()
-//    @State private var isSignedIn = false
     @State private var showImagePicker = false
     @State private var image: UIImage?
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
 
     var body: some View {
         if user.isSignedIn == true {
             RoomList()
         } else {
             VStack {
-                // Login title
-                Text("Login".uppercased())
+//              // Login title
+                Text("GranoffRooms")
                     .font(.title)
                     .fontWeight(.medium)
+//                Image(colorScheme == .light ? "appTitleLight" : "appTitleDark")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .padding(.horizontal, 0.25 * ScreenDimensions.width)
 
                 Spacer()
                   .frame(idealHeight: 0.1 * ScreenDimensions.height)
@@ -82,7 +85,7 @@ struct SignInView: View {
         } label: {
             HStack {
                 Spacer()
-                Text("Guest Login")
+                Text("Continue as Guest")
                     .font(.title3)
                     .padding()
                     .foregroundColor(.white)
@@ -140,7 +143,12 @@ struct SignInView: View {
 }
 
 struct SignInView_Previews: PreviewProvider {
-  static var previews: some View {
-    SignInView()
-  }
+    @EnvironmentObject var roomlist: RoomListViewModel
+    
+    static var previews: some View {
+        SignInView()
+            .preferredColorScheme(.light)
+        SignInView()
+            .preferredColorScheme(.dark)
+    }
 }

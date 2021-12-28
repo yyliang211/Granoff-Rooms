@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct RoomDetail: View {
-//    @EnvironmentObject var roomListViewModel: RoomListViewModel
-//    @ObservedObject var roomListViewModel: RoomListViewModel
     @ObservedObject var viewModel: RoomViewModel
     @State var avail: Bool
     @State private var lastHostingView: UIView!
