@@ -10,7 +10,6 @@ import Firebase
 
 @main
 struct GranoffRoomsApp: App {
-    @StateObject private var roomListViewModel = RoomListViewModel()
     
     init() {
         FirebaseApp.configure()
@@ -19,7 +18,6 @@ struct GranoffRoomsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(roomListViewModel)
         }
     }
 }

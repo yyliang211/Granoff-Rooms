@@ -18,7 +18,6 @@ class RoomViewModel: ObservableObject {
     private var listener: ListenerRegistration?
     
     init(room: Room) {
-        print("Initializing room view model")
         self.room = room
         self.avail = room.avail
     }

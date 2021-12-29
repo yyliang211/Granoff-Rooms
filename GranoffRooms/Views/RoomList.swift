@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct RoomList: View {
-    @EnvironmentObject var modelData: RoomListViewModel
     @ObservedObject var userManager: UserViewModel
-    @ObservedObject var roomListViewModel = RoomListViewModel()
+    @StateObject var roomListViewModel = RoomListViewModel()
     @State private var onlyAvailSelected: Bool = false
     @State private var selectedSortOption: String? = nil
     

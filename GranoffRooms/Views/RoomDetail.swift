@@ -11,7 +11,6 @@ struct RoomDetail: View {
     @ObservedObject var userManager: UserViewModel
     @ObservedObject var viewModel: RoomViewModel
     @State var avail: Bool
-    @State private var lastHostingView: UIView!
     
     var room: Room
     
@@ -28,30 +27,10 @@ struct RoomDetail: View {
             VStack(alignment: .center) {
                 header
                     .padding([.top, .leading, .trailing])
+                
                 CheckinButton(isSet: $avail, userManager: userManager, roomViewModel: viewModel, room: room)
-//                    .onTapGesture {
-//                        viewModel.setAvail()
-//                        print("room is currently \(avail)")
-//                        if avail {
-//                            print("user checking out")
-//                            userManager.checkOut()
-//                        } else {
-//                            print("user checking in")
-//                            userManager.checkIn(roomNumber: room.id)
-//                        }
-//                    }
-//                    .onChange(of: avail) {newAvail in
-//                        viewModel.setAvail()
-//                        print("room is currently \(avail)")
-//                        if avail {
-//                            print("user checking out")
-//                            userManager.checkOut()
-//                        } else {
-//                            print("user checking in")
-//                            userManager.checkIn(roomNumber: room.id)
-//                        }r
-//                    }
                     .padding()
+                
                 Divider()
                 HStack {
                     Text(room.description)
