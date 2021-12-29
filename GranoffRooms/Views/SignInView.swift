@@ -22,19 +22,14 @@ struct SignInView: View {
             RoomList(userManager: user)
         } else {
             VStack {
-//              // Login title
-                Text("GranoffRooms")
-                    .font(.title)
-                    .fontWeight(.medium)
-                
-                
-//                Image(colorScheme == .light ? "appTitleLight" : "appTitleDark")
-//                    .resizable()
-//                    .scaledToFit()
-//                    .padding(.horizontal, 0.25 * ScreenDimensions.width)
+                // Login title
+                Image(colorScheme == .light ? "appTitleLight" : "appTitleDark")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.horizontal, 0.25 * ScreenDimensions.width)
 
                 Spacer()
-                  .frame(idealHeight: 0.1 * ScreenDimensions.height)
+                  .frame(idealHeight: 0.05 * ScreenDimensions.height)
                   .fixedSize()
                 
                 profilePic
