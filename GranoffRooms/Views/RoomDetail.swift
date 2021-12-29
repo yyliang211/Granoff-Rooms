@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct RoomDetail: View {
+    @ObservedObject var userManager: UserViewModel
     @ObservedObject var viewModel: RoomViewModel
     @State var avail: Bool
     @State private var lastHostingView: UIView!
     
     var room: Room
     
-    init(room: Room) {
+    init(room: Room, userManager: UserViewModel) {
         self.room = room
         viewModel = RoomViewModel(room: room)
         avail = room.avail
+        self.userManager = userManager
     }
     
     var body: some View {
@@ -26,10 +28,29 @@ struct RoomDetail: View {
             VStack(alignment: .center) {
                 header
                     .padding([.top, .leading, .trailing])
-                CheckinButton(isSet: $avail)
-                    .onChange(of: avail) {newAvail in
-                        viewModel.setAvail()
-                    }
+                CheckinButton(isSet: $avail, userManager: userManager, roomViewModel: viewModel, room: room)
+//                    .onTapGesture {
+//                        viewModel.setAvail()
+//                        print("room is currently \(avail)")
+//                        if avail {
+//                            print("user checking out")
+//                            userManager.checkOut()
+//                        } else {
+//                            print("user checking in")
+//                            userManager.checkIn(roomNumber: room.id)
+//                        }
+//                    }
+//                    .onChange(of: avail) {newAvail in
+//                        viewModel.setAvail()
+//                        print("room is currently \(avail)")
+//                        if avail {
+//                            print("user checking out")
+//                            userManager.checkOut()
+//                        } else {
+//                            print("user checking in")
+//                            userManager.checkIn(roomNumber: room.id)
+//                        }r
+//                    }
                     .padding()
                 Divider()
                 HStack {
@@ -92,7 +113,7 @@ struct RoomDetail_Previews: PreviewProvider {
     
     static var previews: some View {
         let room = Room(id: "33", avail: true, name: "Room 033", imageName: "Megumi", description: "desc")
-        RoomDetail(room: room)
+        RoomDetail(room: room, userManager: UserViewModel())
             .preferredColorScheme(.dark)
         
 //        RoomDetail(room: roomListViewModel.rooms[0])

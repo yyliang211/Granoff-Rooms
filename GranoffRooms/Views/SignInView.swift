@@ -19,13 +19,15 @@ struct SignInView: View {
 
     var body: some View {
         if user.isSignedIn == true {
-            RoomList()
+            RoomList(userManager: user)
         } else {
             VStack {
 //              // Login title
                 Text("GranoffRooms")
                     .font(.title)
                     .fontWeight(.medium)
+                
+                
 //                Image(colorScheme == .light ? "appTitleLight" : "appTitleDark")
 //                    .resizable()
 //                    .scaledToFit()

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RoomList: View {
     @EnvironmentObject var modelData: RoomListViewModel
+    @ObservedObject var userManager: UserViewModel
     @ObservedObject var roomListViewModel = RoomListViewModel()
     @State private var onlyAvailSelected: Bool = false
     @State private var selectedSortOption: String? = nil
@@ -32,24 +33,15 @@ struct RoomList: View {
                 
                 ForEach(roomListViewModel.rooms) { room in
                     NavigationLink {
-                        RoomDetail(room: room)
+                        RoomDetail(room: room, userManager: userManager)
                     } label: {
                         RoomRow(room: room)
                     }
                 }
             }
             .navigationBarTitle("Practice Rooms")
-//            .toolbar {
-//              ToolbarItem(placement: .navigationBarTrailing) {
-//                  Button {
-//
-//                  } label: {
-//                      Icon(image: Image("hitagi"))
-//                  }
-//              }
-//            }
             .onAppear {
-              filter()
+                roomListViewModel.loadData()
             }
             .onDisappear {
                 roomListViewModel.unsubscribe()
@@ -62,7 +54,7 @@ struct RoomList: View {
 
 struct RoomList_Previews: PreviewProvider {
     static var previews: some View {
-        RoomList()
+        RoomList(userManager: UserViewModel())
             .environmentObject(RoomListViewModel())
     }
 }

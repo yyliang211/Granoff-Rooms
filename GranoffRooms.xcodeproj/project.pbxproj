@@ -15,6 +15,7 @@
 		DC48C5CF27715C8A00C2267E /* roomData.json in Resources */ = {isa = PBXBuildFile; fileRef = DC48C5CE27715C8A00C2267E /* roomData.json */; };
 		DC48C5D12771608C00C2267E /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48C5D02771608C00C2267E /* RoomList.swift */; };
 		DC48C5D3277163C200C2267E /* RoomDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48C5D2277163C200C2267E /* RoomDetail.swift */; };
+		DCA18F71277B4A8A00AF27AB /* OccupiedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA18F70277B4A8900AF27AB /* OccupiedButton.swift */; };
 		DCBC36D92772B3360050E0CF /* RoomListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC36D82772B3360050E0CF /* RoomListViewModel.swift */; };
 		DCBC36E92772FF6F0050E0CF /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC36E82772FF6E0050E0CF /* UserViewModel.swift */; };
 		DCBC36EB277305000050E0CF /* ScreenDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC36EA277304FF0050E0CF /* ScreenDimensions.swift */; };
@@ -66,6 +67,7 @@
 		DC48C5CE27715C8A00C2267E /* roomData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = roomData.json; sourceTree = "<group>"; };
 		DC48C5D02771608C00C2267E /* RoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomList.swift; sourceTree = "<group>"; };
 		DC48C5D2277163C200C2267E /* RoomDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetail.swift; sourceTree = "<group>"; };
+		DCA18F70277B4A8900AF27AB /* OccupiedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccupiedButton.swift; sourceTree = "<group>"; };
 		DCBC36D82772B3360050E0CF /* RoomListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewModel.swift; sourceTree = "<group>"; };
 		DCBC36E82772FF6E0050E0CF /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		DCBC36EA277304FF0050E0CF /* ScreenDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenDimensions.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				DCC155722774325C0047F6A9 /* NavigationBarViews.swift */,
 				DCF3615B277149AC00FC3E9C /* CheckinButton.swift */,
+				DCA18F70277B4A8900AF27AB /* OccupiedButton.swift */,
 				DCF361592771410E00FC3E9C /* Icon.swift */,
 				DCD6AABF2775563500622B8A /* CannotCheckInButton.swift */,
 			);
@@ -390,6 +393,7 @@
 				DC48C5D12771608C00C2267E /* RoomList.swift in Sources */,
 				DCD6AAC02775563600622B8A /* CannotCheckInButton.swift in Sources */,
 				DCC7D3FB2771C9110016B379 /* SignInView.swift in Sources */,
+				DCA18F71277B4A8A00AF27AB /* OccupiedButton.swift in Sources */,
 				DC48C5CD27715BE900C2267E /* RoomRow.swift in Sources */,
 				DCC155732774325C0047F6A9 /* NavigationBarViews.swift in Sources */,
 				DCBC36EB277305000050E0CF /* ScreenDimensions.swift in Sources */,

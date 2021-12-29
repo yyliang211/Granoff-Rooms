@@ -30,6 +30,12 @@ class RoomListViewModel: ObservableObject {
         }
     }
     
+    func loadData() {
+        unsubscribe()
+        let query = self.baseQuery.order(by: "avail", descending: true).order(by: "name")
+        subscribe(to: query)
+    }
+    
     func subscribe(to query: Query) {
         if listener == nil {
             listener = query.addSnapshotListener { [weak self] querySnapshot, error in
@@ -41,7 +47,6 @@ class RoomListViewModel: ObservableObject {
                 guard let self = self else { return }
                 self.rooms = documents.compactMap { document in
                     do {
-                        
                         var room = try document.data(as: Room.self)
                         room?.reference = document.reference
                         return room
