@@ -18,6 +18,10 @@ class RoomListViewModel: ObservableObject {
     private var listener: ListenerRegistration?
     private let baseQuery: Query = Firestore.firestore().collection("rooms").limit(to: 100)
     
+//    init() {
+//        loadData()
+//    }
+    
     //need to remove listener when dealloacting class
     deinit {
         unsubscribe()

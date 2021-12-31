@@ -92,7 +92,7 @@ struct SignInView: View {
             .cornerRadius(15)
         }
         .padding(.vertical)
-        .padding(.horizontal, 0.2 * ScreenDimensions.width)
+        .padding(.horizontal, 0.17 * ScreenDimensions.width)
     }
     
 
@@ -140,12 +140,12 @@ struct SignInView: View {
 }
 
 struct SignInView_Previews: PreviewProvider {
-    @EnvironmentObject var roomlist: RoomListViewModel
-    
     static var previews: some View {
         SignInView()
             .preferredColorScheme(.light)
+            .environmentObject(UserViewModel())
         SignInView()
             .preferredColorScheme(.dark)
+            .environmentObject(UserViewModel())
     }
 }

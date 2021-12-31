@@ -9,7 +9,8 @@ import SwiftUI
 
 struct RoomList: View {
     @ObservedObject var userManager: UserViewModel
-    @StateObject var roomListViewModel = RoomListViewModel()
+    @ObservedObject var roomListViewModel = RoomListViewModel()
+    
     @State private var onlyAvailSelected: Bool = false
     @State private var selectedSortOption: String? = nil
     
@@ -45,15 +46,14 @@ struct RoomList: View {
             .onDisappear {
                 roomListViewModel.unsubscribe()
             }
-            
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
 struct RoomList_Previews: PreviewProvider {
+    
     static var previews: some View {
         RoomList(userManager: UserViewModel())
-            .environmentObject(RoomListViewModel())
     }
 }

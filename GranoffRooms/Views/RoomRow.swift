@@ -36,11 +36,11 @@ struct RoomRow: View {
 
 struct RoomRow_Previews: PreviewProvider {
     static var previews: some View {
-        let room = Room(id: "33", avail: true, name: "Room 033", imageName: "Levi", description: "desc")
+        let example_room = Room(id: "33", avail: true, name: "Room 033", imageName: "levi", description: "desc")
         Group {
-            RoomRow(room: room)
+            RoomRow(room: example_room)
                 .preferredColorScheme(.dark)
-            RoomRow(room: room)
+            RoomRow(room: example_room)
                 .preferredColorScheme(.light)
         }
         .previewLayout(.fixed(width: 300, height: 70))

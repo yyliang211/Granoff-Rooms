@@ -41,7 +41,6 @@ class RoomViewModel: ObservableObject {
         } else {
             print("Error: Document reference is nil")
         }
-        
     }
     
     func unsubscribe() {

@@ -63,18 +63,31 @@ class UserViewModel: ObservableObject {
     }
     
     func checkIn(roomNumber: String) {
-        if isCheckedIn {
-            print("user already chcked in, cannot check in")
-        }
         self.roomID = roomNumber
         self.isCheckedIn = true
         storeUserInformation(roomID: roomNumber, isCheckedIn: true)
+        
+        let uid = getCurrentUserID()
+        if let uid = uid {
+            db.collection("rooms").document(roomID).updateData(["uid": uid]) { err in
+                if let err = err {
+                    print("Error updating uid in room document \(err)")
+                } else {
+                    print("Room document uid successfully updated")
+                }
+            }
+        }
     }
     
     func checkOut() {
-        if !isCheckedIn {
-            print("user already chcked out, cannot check out")
+        db.collection("rooms").document(roomID).updateData(["uid": "none"]) { err in
+            if let err = err {
+                print("Error updating uid in room document \(err)")
+            } else {
+                print("Room document uid successfully updated")
+            }
         }
+        
         self.roomID = ""
         self.isCheckedIn = false
         storeUserInformation(roomID: "", isCheckedIn: false)

@@ -70,6 +70,7 @@ struct RoomDetail: View {
     }
     
     
+    
     var header: some View {
         HStack(alignment: .center) {
             Text(room.name)
@@ -87,19 +88,10 @@ struct RoomDetail: View {
 }
 
 struct RoomDetail_Previews: PreviewProvider {
-//    static let roomListViewModel = RoomListViewModel()
-    
-    
     static var previews: some View {
-        let room = Room(id: "33", avail: true, name: "Room 033", imageName: "Megumi", description: "desc")
+        let room = Room(id: "33", avail: true, name: "Room 033", imageName: "megumi", description: "Steinway")
+        
         RoomDetail(room: room, userManager: UserViewModel())
             .preferredColorScheme(.dark)
-        
-//        RoomDetail(room: roomListViewModel.rooms[0])
-//            .preferredColorScheme(.dark)
-//            .environmentObject(roomListViewModel)
-//        RoomDetail(room: roomListViewModel.rooms[0])
-//            .preferredColorScheme(.light)
-//            .environmentObject(roomListViewModel)
     }
 }
