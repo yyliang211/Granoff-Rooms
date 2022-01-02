@@ -32,7 +32,6 @@ struct CheckinButton: View {
                 //user is trying to check out of his room
                 else {
                     print("User \(userManager.getUserID()) checking out of room \(room.id)")
-                    print("avail 0: \(roomViewModel.avail)")
                     isSet.toggle()
                     roomViewModel.setAvail()
                     userManager.checkOut()
