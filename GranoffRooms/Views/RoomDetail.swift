@@ -22,42 +22,44 @@ struct RoomDetail: View {
     }
     
     var body: some View {
-        ZStack {
-            //Layer 1
-            VStack {
+        VStack(spacing:0) {
+            HStack {
                 Image(room.name)
                     .resizable()
-                    .scaledToFit()
-                Spacer()
-                Text("yo")
+                    .scaledToFill()
             }
+            .frame(height: 0.8 * ScreenDimensions.height)
             
-            //Layer 2
-            ScrollView {
-                VStack(spacing:0) {
-                    HStack {
-                        Spacer()
-                            .frame(height: 0.4 * ScreenDimensions.height)
-                    }
+            VStack(alignment: .leading) {
+                HStack {
                     VStack {
-                        header
-                            .padding([.leading, .trailing])
-                        
-                        CheckinButton(isSet: $avail, userManager: userManager, roomViewModel: viewModel, room: room)
-                        Spacer()
+                        HStack {
+                            Text(room.name)
+                                .font(Font.custom("CircularStd-Book", size: 40))
+                                .foregroundColor(.white)
+                            Spacer()
+                        }
                         HStack {
                             Text(room.description)
-                                .font(.headline)
-                                .padding(.leading)
+                                .font(Font.custom("CircularStd-Light", size: 15))
+                                .foregroundColor(.white)
                             Spacer()
                         }
                     }
-                    .background(LinearGradient(gradient: Gradient(colors: [
-                        Color("theme"),
-                        Color.black
-                    ]), startPoint: .top, endPoint: .bottom))
+                    Spacer()
+                    CheckinButton(isSet: $avail, userManager: userManager, roomViewModel: viewModel, room: room)
+                        .padding(.top)
+                }
+                VStack {
+                    Spacer()
+                        .frame(height: 0.2 * ScreenDimensions.height)
                 }
             }
+            .padding()
+            .background(LinearGradient(gradient: Gradient(colors: [
+                Color("theme"),
+                Color.black
+            ]), startPoint: .top, endPoint: .bottom))
         }
     }
     
@@ -81,7 +83,7 @@ struct RoomDetail: View {
 
 struct RoomDetail_Previews: PreviewProvider {
     static var previews: some View {
-        let room = Room(id: "61", avail: true, name: "Room 061", imageName: "megumi", description: "Steinway")
+        let room = Room(id: "61", avail: true, name: "Room 061", imageName: "megumi", description: "Steinway & Sons Baby Grand")
         
         RoomDetail(room: room, userManager: UserViewModel())
             .preferredColorScheme(.dark)

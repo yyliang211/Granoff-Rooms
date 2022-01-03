@@ -34,6 +34,7 @@ struct SignInView: View {
                 
                 profilePic
                 signInButton
+                    .padding()
                 
                 Spacer()
                   .frame(idealHeight: 0.3 * ScreenDimensions.height)
@@ -88,7 +89,7 @@ struct SignInView: View {
             HStack {
                 Spacer()
                 Text("Continue as Guest")
-                    .font(.title3)
+                    .font(Font.custom("CircularStd-Light", size: 20))
                     .padding()
                     .foregroundColor(.white)
                 Spacer()

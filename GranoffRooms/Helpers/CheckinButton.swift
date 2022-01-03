@@ -52,14 +52,14 @@ struct CheckinButton: View {
         } label: {
             if isSet {
                 Text("Check In")
-                .font(.largeTitle)
+                .font(Font.custom("CircularStd-Book", size: 30))
                 .padding()
                 .foregroundColor(.white)
                 .background(Color("myOrange"))
                 .cornerRadius(30)
             } else {
                 Text("Check Out")
-                .font(.largeTitle)
+                .font(Font.custom("CircularStd-Book", size: 30))
                 .padding()
                 .foregroundColor(.white)
                 .background(Color("myGray"))
