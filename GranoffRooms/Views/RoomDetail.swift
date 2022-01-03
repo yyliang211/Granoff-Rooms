@@ -23,50 +23,55 @@ struct RoomDetail: View {
     
     var body: some View {
         
-        ScrollView {
-            VStack(alignment: .center) {
-                header
-                    .padding([.top, .leading, .trailing])
-                
-                CheckinButton(isSet: $avail, userManager: userManager, roomViewModel: viewModel, room: room)
-                    .padding()
-                
-                Divider()
-                HStack {
-                    Text(room.description)
-                        .font(.headline)
-                        .padding(.leading)
-                    Spacer()
-                }
-                HStack {
-                    Image(room.name)
-                        .resizable()
-                        .scaledToFit()
-                        .padding()
-                }
-                
+        ZStack {
+            //Layer 1
+            VStack {
+                Image(room.name)
+                    .resizable()
+                    .scaledToFit()
+                Spacer()
             }
-//            .padding()
-//            .overlay(
-//                Icon(image: room.image)
-//                    .frame(width: 50, height: 50)
-//                    .padding(.trailing, 20)
-//                    .offset(x: 0, y: -50)
-//                , alignment: .topTrailing)
-//            .navigationTitle(room.name)
-//            .navigationBarTitleDisplayMode(.inline)
+            
+            //Layer 2
+            ScrollView {
+                VStack(spacing:0) {
+                    HStack {
+                        Spacer()
+                            .frame(height: 0.4 * ScreenDimensions.height)
+                            .background(LinearGradient(gradient: Gradient(colors: [
+                                Color.clear,
+                                Color.clear,
+                                Color.clear,
+                                Color.clear,
+                                Color.clear,
+                                Color.clear,
+                                Color.black
+                            ]), startPoint: .top, endPoint: .bottom))
+                    }
+                    VStack {
+                        header
+                            .padding([.leading, .trailing])
+                        
+                        CheckinButton(isSet: $avail, userManager: userManager, roomViewModel: viewModel, room: room)
+                        
+                        HStack {
+                            Text(room.description)
+                                .font(.headline)
+                                .padding(.leading)
+                            Spacer()
+                        }
+                    }
+                    .background(LinearGradient(gradient: Gradient(colors: [
+                        Color("theme"),
+                        Color("theme"),
+                        Color("theme"),
+                        Color("theme"),
+                        Color("theme"),
+                        Color.black
+                    ]), startPoint: .top, endPoint: .bottom))
+                }
+            }
         }
-//        .toolbar {
-//            ToolbarItem(placement: .navigationBarTrailing ) {
-//                Button {
-//                    print("navbar trailing button pressed")
-//                } label: {
-//                    Icon(image: room.image)
-//                        .frame(width: 20, height: 20)
-//                }
-//            }
-//        }
-        
     }
     
     
@@ -89,7 +94,7 @@ struct RoomDetail: View {
 
 struct RoomDetail_Previews: PreviewProvider {
     static var previews: some View {
-        let room = Room(id: "33", avail: true, name: "Room 033", imageName: "megumi", description: "Steinway")
+        let room = Room(id: "61", avail: true, name: "Room 061", imageName: "megumi", description: "Steinway")
         
         RoomDetail(room: room, userManager: UserViewModel())
             .preferredColorScheme(.dark)
