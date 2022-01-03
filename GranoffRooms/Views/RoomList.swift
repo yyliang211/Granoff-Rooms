@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RoomList: View {
+    @Environment(\.scenePhase) var scenePhase
+    
     @ObservedObject var userManager: UserViewModel
     @ObservedObject var roomListViewModel = RoomListViewModel()
     
@@ -46,6 +48,11 @@ struct RoomList: View {
             }
             .onDisappear {
                 roomListViewModel.unsubscribe()
+            }
+            .onChange(of: scenePhase) { newPhase in
+                if newPhase == .active {
+                    roomListViewModel.loadData()
+                }
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
