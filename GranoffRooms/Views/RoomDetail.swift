@@ -22,7 +22,6 @@ struct RoomDetail: View {
     }
     
     var body: some View {
-        
         ZStack {
             //Layer 1
             VStack {
@@ -30,6 +29,7 @@ struct RoomDetail: View {
                     .resizable()
                     .scaledToFit()
                 Spacer()
+                Text("yo")
             }
             
             //Layer 2
@@ -38,22 +38,13 @@ struct RoomDetail: View {
                     HStack {
                         Spacer()
                             .frame(height: 0.4 * ScreenDimensions.height)
-                            .background(LinearGradient(gradient: Gradient(colors: [
-                                Color.clear,
-                                Color.clear,
-                                Color.clear,
-                                Color.clear,
-                                Color.clear,
-                                Color.clear,
-                                Color.black
-                            ]), startPoint: .top, endPoint: .bottom))
                     }
                     VStack {
                         header
                             .padding([.leading, .trailing])
                         
                         CheckinButton(isSet: $avail, userManager: userManager, roomViewModel: viewModel, room: room)
-                        
+                        Spacer()
                         HStack {
                             Text(room.description)
                                 .font(.headline)
@@ -62,10 +53,6 @@ struct RoomDetail: View {
                         }
                     }
                     .background(LinearGradient(gradient: Gradient(colors: [
-                        Color("theme"),
-                        Color("theme"),
-                        Color("theme"),
-                        Color("theme"),
                         Color("theme"),
                         Color.black
                     ]), startPoint: .top, endPoint: .bottom))

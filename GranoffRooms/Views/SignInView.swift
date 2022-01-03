@@ -22,19 +22,24 @@ struct SignInView: View {
             RoomList(userManager: user)
         } else {
             VStack {
-                // Login title
-                Image(colorScheme == .light ? "appTitleLight" : "appTitleDark")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(.horizontal, 0.25 * ScreenDimensions.width)
-
                 Spacer()
-                  .frame(idealHeight: 0.05 * ScreenDimensions.height)
-                  .fixedSize()
+                    .frame(idealHeight: 0.05 * ScreenDimensions.height)
+                    .fixedSize()
+                // Login title
+                Text("GranoffRooms")
+                    .foregroundColor(.white)
+                    .font(Font.custom("CircularStd-Medium", size: 32))
+                
+                Spacer()
                 
                 profilePic
                 signInButton
+                
+                Spacer()
+                  .frame(idealHeight: 0.3 * ScreenDimensions.height)
+                  .fixedSize()
             }
+            .background(Color.black)
             .alert(isPresented: $user.alert, content: {
               Alert(
                 title: Text("Message"),
@@ -66,11 +71,11 @@ struct SignInView: View {
                     Image(systemName: "person.fill")
                         .font(.system(size: 64))
                         .padding()
-                        .foregroundColor(Color(.label))
+                        .foregroundColor(Color.white)
                 }
             }
             .overlay {
-                Circle().stroke(Color.black, lineWidth: 2)
+                Circle().stroke(Color.white, lineWidth: 2)
             }
         }
     }

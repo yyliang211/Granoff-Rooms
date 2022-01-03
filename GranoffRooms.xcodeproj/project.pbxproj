@@ -15,6 +15,16 @@
 		DC48C5CF27715C8A00C2267E /* roomData.json in Resources */ = {isa = PBXBuildFile; fileRef = DC48C5CE27715C8A00C2267E /* roomData.json */; };
 		DC48C5D12771608C00C2267E /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48C5D02771608C00C2267E /* RoomList.swift */; };
 		DC48C5D3277163C200C2267E /* RoomDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC48C5D2277163C200C2267E /* RoomDetail.swift */; };
+		DC8861AA2782DE8500A30BA2 /* CircularStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A02782DE8200A30BA2 /* CircularStd-Light.otf */; };
+		DC8861AB2782DE8500A30BA2 /* CircularStd-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A12782DE8200A30BA2 /* CircularStd-BoldItalic.otf */; };
+		DC8861AC2782DE8500A30BA2 /* CircularStd-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A22782DE8200A30BA2 /* CircularStd-BookItalic.otf */; };
+		DC8861AD2782DE8500A30BA2 /* CircularStd-Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A32782DE8200A30BA2 /* CircularStd-Light Italic.otf */; };
+		DC8861AE2782DE8500A30BA2 /* CircularStd-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A42782DE8300A30BA2 /* CircularStd-MediumItalic.otf */; };
+		DC8861AF2782DE8500A30BA2 /* CircularStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A52782DE8300A30BA2 /* CircularStd-Black.otf */; };
+		DC8861B02782DE8500A30BA2 /* CircularStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A62782DE8300A30BA2 /* CircularStd-Book.otf */; };
+		DC8861B12782DE8500A30BA2 /* CircularStd-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A72782DE8300A30BA2 /* CircularStd-BlackItalic.otf */; };
+		DC8861B22782DE8500A30BA2 /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A82782DE8400A30BA2 /* CircularStd-Bold.otf */; };
+		DC8861B32782DE8500A30BA2 /* CircularStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A92782DE8400A30BA2 /* CircularStd-Medium.otf */; };
 		DCA18F71277B4A8A00AF27AB /* OccupiedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA18F70277B4A8900AF27AB /* OccupiedButton.swift */; };
 		DCBC36D92772B3360050E0CF /* RoomListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC36D82772B3360050E0CF /* RoomListViewModel.swift */; };
 		DCBC36E92772FF6F0050E0CF /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC36E82772FF6E0050E0CF /* UserViewModel.swift */; };
@@ -67,6 +77,17 @@
 		DC48C5CE27715C8A00C2267E /* roomData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = roomData.json; sourceTree = "<group>"; };
 		DC48C5D02771608C00C2267E /* RoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomList.swift; sourceTree = "<group>"; };
 		DC48C5D2277163C200C2267E /* RoomDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetail.swift; sourceTree = "<group>"; };
+		DC8861A02782DE8200A30BA2 /* CircularStd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Light.otf"; sourceTree = "<group>"; };
+		DC8861A12782DE8200A30BA2 /* CircularStd-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BoldItalic.otf"; sourceTree = "<group>"; };
+		DC8861A22782DE8200A30BA2 /* CircularStd-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BookItalic.otf"; sourceTree = "<group>"; };
+		DC8861A32782DE8200A30BA2 /* CircularStd-Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Light Italic.otf"; sourceTree = "<group>"; };
+		DC8861A42782DE8300A30BA2 /* CircularStd-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-MediumItalic.otf"; sourceTree = "<group>"; };
+		DC8861A52782DE8300A30BA2 /* CircularStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.otf"; sourceTree = "<group>"; };
+		DC8861A62782DE8300A30BA2 /* CircularStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.otf"; sourceTree = "<group>"; };
+		DC8861A72782DE8300A30BA2 /* CircularStd-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BlackItalic.otf"; sourceTree = "<group>"; };
+		DC8861A82782DE8400A30BA2 /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
+		DC8861A92782DE8400A30BA2 /* CircularStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.otf"; sourceTree = "<group>"; };
+		DC8861B42782E11F00A30BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DCA18F70277B4A8900AF27AB /* OccupiedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccupiedButton.swift; sourceTree = "<group>"; };
 		DCBC36D82772B3360050E0CF /* RoomListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewModel.swift; sourceTree = "<group>"; };
 		DCBC36E82772FF6E0050E0CF /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -157,6 +178,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		DC88619F2782DE2600A30BA2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DC8861A52782DE8300A30BA2 /* CircularStd-Black.otf */,
+				DC8861A72782DE8300A30BA2 /* CircularStd-BlackItalic.otf */,
+				DC8861A82782DE8400A30BA2 /* CircularStd-Bold.otf */,
+				DC8861A12782DE8200A30BA2 /* CircularStd-BoldItalic.otf */,
+				DC8861A62782DE8300A30BA2 /* CircularStd-Book.otf */,
+				DC8861A22782DE8200A30BA2 /* CircularStd-BookItalic.otf */,
+				DC8861A32782DE8200A30BA2 /* CircularStd-Light Italic.otf */,
+				DC8861A02782DE8200A30BA2 /* CircularStd-Light.otf */,
+				DC8861A92782DE8400A30BA2 /* CircularStd-Medium.otf */,
+				DC8861A42782DE8300A30BA2 /* CircularStd-MediumItalic.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		DCBC36EC277319A50050E0CF /* View Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,7 +229,9 @@
 		DCDCC02F277138BB00CE42CD /* GranoffRooms */ = {
 			isa = PBXGroup;
 			children = (
+				DC8861B42782E11F00A30BA2 /* Info.plist */,
 				DCDCC030277138BB00CE42CD /* GranoffRoomsApp.swift */,
+				DC88619F2782DE2600A30BA2 /* Fonts */,
 				DCDCC05C2771398600CE42CD /* Views */,
 				DCBC36EC277319A50050E0CF /* View Models */,
 				DC48C5C42771596E00C2267E /* Helpers */,
@@ -358,9 +398,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC48C5CF27715C8A00C2267E /* roomData.json in Resources */,
+				DC8861AC2782DE8500A30BA2 /* CircularStd-BookItalic.otf in Resources */,
+				DC8861B02782DE8500A30BA2 /* CircularStd-Book.otf in Resources */,
+				DC8861AB2782DE8500A30BA2 /* CircularStd-BoldItalic.otf in Resources */,
 				DCC7D3CF27717C430016B379 /* GoogleService-Info.plist in Resources */,
+				DC8861AF2782DE8500A30BA2 /* CircularStd-Black.otf in Resources */,
+				DC8861AE2782DE8500A30BA2 /* CircularStd-MediumItalic.otf in Resources */,
 				DCDCC038277138C000CE42CD /* Preview Assets.xcassets in Resources */,
+				DC8861B22782DE8500A30BA2 /* CircularStd-Bold.otf in Resources */,
+				DC8861AA2782DE8500A30BA2 /* CircularStd-Light.otf in Resources */,
+				DC8861AD2782DE8500A30BA2 /* CircularStd-Light Italic.otf in Resources */,
+				DC8861B12782DE8500A30BA2 /* CircularStd-BlackItalic.otf in Resources */,
 				DCDCC035277138C000CE42CD /* Assets.xcassets in Resources */,
+				DC8861B32782DE8500A30BA2 /* CircularStd-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +619,7 @@
 				DEVELOPMENT_TEAM = 9W9HT8TFBH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GranoffRooms/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -599,6 +650,7 @@
 				DEVELOPMENT_TEAM = 9W9HT8TFBH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GranoffRooms/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
