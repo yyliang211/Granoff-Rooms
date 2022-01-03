@@ -18,9 +18,9 @@ struct RoomRow: View {
                 .clipped()
             
             Text(room.name)
-                .font(.title)
-                .fontWeight(.regular)
-                .padding(.leading)
+                .font(Font.custom("CircularStd-Light", size: 28))
+                .padding(.leading, 4.0)
+                
             
             Spacer()
             

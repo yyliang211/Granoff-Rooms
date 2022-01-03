@@ -27,7 +27,7 @@ struct SignInView: View {
                     .fixedSize()
                 // Login title
                 Text("GranoffRooms")
-                    .foregroundColor(.white)
+                    .foregroundColor(colorScheme == .light ? Color.black : Color.white)
                     .font(Font.custom("CircularStd-Medium", size: 32))
                 
                 Spacer()
@@ -40,7 +40,7 @@ struct SignInView: View {
                   .frame(idealHeight: 0.3 * ScreenDimensions.height)
                   .fixedSize()
             }
-            .background(Color.black)
+//            .background(Color.black)
             .alert(isPresented: $user.alert, content: {
               Alert(
                 title: Text("Message"),
@@ -72,11 +72,11 @@ struct SignInView: View {
                     Image(systemName: "person.fill")
                         .font(.system(size: 64))
                         .padding()
-                        .foregroundColor(Color.white)
+                        .foregroundColor(colorScheme == .light ? Color.black : Color.white)
                 }
             }
             .overlay {
-                Circle().stroke(Color.white, lineWidth: 2)
+                Circle().stroke(colorScheme == .light ? Color.black : Color.white, lineWidth: 2)
             }
         }
     }

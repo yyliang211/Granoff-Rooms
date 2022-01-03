@@ -25,6 +25,7 @@ struct RoomList: View {
             List {
                 Toggle(isOn: $onlyAvailSelected) {
                     Text("Available Rooms Only")
+                    .font(Font.custom("CircularStd-Light", size: 20))
                 }
                 .onChange(of: onlyAvailSelected) { value in
                     print("avail selected is currently \(onlyAvailSelected)")
@@ -39,7 +40,7 @@ struct RoomList: View {
                     }
                 }
             }
-            .navigationBarTitle("Practice Rooms")
+            .navigationTitle("Practice Rooms")
             .onAppear {
                 roomListViewModel.loadData()
             }

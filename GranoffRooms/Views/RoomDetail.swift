@@ -28,7 +28,9 @@ struct RoomDetail: View {
                     .resizable()
                     .scaledToFill()
             }
-            .frame(height: 0.8 * ScreenDimensions.height)
+            .frame(width: ScreenDimensions.width, height: 0.8 * ScreenDimensions.height)
+            .clipped()
+            
             
             VStack(alignment: .leading) {
                 HStack {
