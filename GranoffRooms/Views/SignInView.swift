@@ -98,7 +98,7 @@ struct SignInView: View {
             .cornerRadius(15)
         }
         .padding(.vertical)
-        .padding(.horizontal, 0.17 * ScreenDimensions.width)
+        .padding(.horizontal, 0.11 * ScreenDimensions.width)
     }
     
 
