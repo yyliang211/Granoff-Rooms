@@ -11,11 +11,12 @@ import Combine
 import Foundation
 
 class RoomViewModel: ObservableObject {
-    var room: Room
-    
     @Published var avail: Bool
+    @Published var alert = false
+    @Published var alertMessage = ""
     private var db = Firestore.firestore()
     private var listener: ListenerRegistration?
+    var room: Room
     
     init(room: Room) {
         self.room = room
@@ -26,12 +27,18 @@ class RoomViewModel: ObservableObject {
         unsubscribe()
     }
     
+    private func showAlertMessage(message: String) {
+      alertMessage = message
+      alert.toggle()
+    }
+    
     func setAvail() {
         self.avail = !avail
         let roomRef = room.reference
         if let roomRef = roomRef {
             roomRef.updateData(["avail": avail]) { err in
                 if let err = err {
+                    self.showAlertMessage(message: err.localizedDescription)
                     print("Error updating document \(err)")
                 } else {
                     print("Document avail successfully updated")

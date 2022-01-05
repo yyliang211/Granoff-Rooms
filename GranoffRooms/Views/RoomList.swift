@@ -54,6 +54,13 @@ struct RoomList: View {
                     roomListViewModel.loadData()
                 }
             }
+            .alert(isPresented: $roomListViewModel.alert, content: {
+                Alert(
+                  title: Text("Message"),
+                  message: Text(roomListViewModel.alertMessage),
+                  dismissButton: .destructive(Text("OK"))
+                )
+              })
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

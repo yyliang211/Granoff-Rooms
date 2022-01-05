@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RoomDetail: View {
+    @Environment(\.presentationMode) var presentationMode
     @ObservedObject var userManager: UserViewModel
     @ObservedObject var viewModel: RoomViewModel
     @State var avail: Bool
@@ -17,7 +18,7 @@ struct RoomDetail: View {
     init(room: Room, userManager: UserViewModel) {
         self.room = room
         viewModel = RoomViewModel(room: room)
-        avail = room.avail
+        _avail = State(initialValue: room.avail)
         self.userManager = userManager
     }
     
@@ -63,24 +64,21 @@ struct RoomDetail: View {
                 Color.black
             ]), startPoint: .top, endPoint: .bottom))
         }
+//        .navigationBarBackButtonHidden(true)
+//        .toolbar {
+//            ToolbarItem(placement: .navigationBarLeading) {
+//                Button {
+//                    self.presentationMode.wrappedValue.dismiss()
+//                } label: {
+//                    Image(systemName: "chevron.backward.circle.fill")
+//                        .renderingMode(.original)
+//                        .font(.system(size: 20))
+//                        .foregroundColor(.white)
+//                }
+//            }
+//        }
     }
     
-    
-    
-    var header: some View {
-        HStack(alignment: .center) {
-            Text(room.name)
-                .font(.largeTitle)
-                .fontWeight(.medium)
-            Spacer()
-                .frame(idealWidth: 0.05 * ScreenDimensions.width)
-                .fixedSize()
-            Icon(image: room.image)
-                .frame(width: 80, height: 80)
-                .padding(.horizontal)
-            
-        }
-    }
 }
 
 struct RoomDetail_Previews: PreviewProvider {

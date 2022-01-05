@@ -81,6 +81,20 @@ struct CheckinButton: View {
         } message: {
             Text("Room is occupied")
         }
+        .alert(isPresented: $userManager.alert, content: {
+          Alert(
+            title: Text("Message"),
+            message: Text(user.alertMessage),
+            dismissButton: .destructive(Text("Ok"))
+          )
+        })
+        .alert(isPresented: $roomViewModel.alert, content: {
+          Alert(
+            title: Text("Message"),
+            message: Text(roomViewModel.alertMessage),
+            dismissButton: .destructive(Text("OK"))
+          )
+        })
         
         
         

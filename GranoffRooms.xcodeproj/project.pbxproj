@@ -25,7 +25,6 @@
 		DC8861B12782DE8500A30BA2 /* CircularStd-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A72782DE8300A30BA2 /* CircularStd-BlackItalic.otf */; };
 		DC8861B22782DE8500A30BA2 /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A82782DE8400A30BA2 /* CircularStd-Bold.otf */; };
 		DC8861B32782DE8500A30BA2 /* CircularStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC8861A92782DE8400A30BA2 /* CircularStd-Medium.otf */; };
-		DCA18F71277B4A8A00AF27AB /* OccupiedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA18F70277B4A8900AF27AB /* OccupiedButton.swift */; };
 		DCBC36D92772B3360050E0CF /* RoomListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC36D82772B3360050E0CF /* RoomListViewModel.swift */; };
 		DCBC36E92772FF6F0050E0CF /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC36E82772FF6E0050E0CF /* UserViewModel.swift */; };
 		DCBC36EB277305000050E0CF /* ScreenDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC36EA277304FF0050E0CF /* ScreenDimensions.swift */; };
@@ -41,7 +40,6 @@
 		DCC7D3FB2771C9110016B379 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7D3FA2771C9100016B379 /* SignInView.swift */; };
 		DCC7D3FC2771C9120016B379 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7D3FA2771C9100016B379 /* SignInView.swift */; };
 		DCC7D3FD2771C9120016B379 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7D3FA2771C9100016B379 /* SignInView.swift */; };
-		DCD6AAC02775563600622B8A /* CannotCheckInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6AABF2775563500622B8A /* CannotCheckInButton.swift */; };
 		DCDCC031277138BB00CE42CD /* GranoffRoomsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC030277138BB00CE42CD /* GranoffRoomsApp.swift */; };
 		DCDCC033277138BB00CE42CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC032277138BB00CE42CD /* ContentView.swift */; };
 		DCDCC035277138C000CE42CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC034277138C000CE42CD /* Assets.xcassets */; };
@@ -88,7 +86,6 @@
 		DC8861A82782DE8400A30BA2 /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
 		DC8861A92782DE8400A30BA2 /* CircularStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.otf"; sourceTree = "<group>"; };
 		DC8861B42782E11F00A30BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		DCA18F70277B4A8900AF27AB /* OccupiedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccupiedButton.swift; sourceTree = "<group>"; };
 		DCBC36D82772B3360050E0CF /* RoomListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewModel.swift; sourceTree = "<group>"; };
 		DCBC36E82772FF6E0050E0CF /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		DCBC36EA277304FF0050E0CF /* ScreenDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenDimensions.swift; sourceTree = "<group>"; };
@@ -96,7 +93,6 @@
 		DCC155722774325C0047F6A9 /* NavigationBarViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBarViews.swift; path = GranoffRooms/Model/NavigationBarViews.swift; sourceTree = SOURCE_ROOT; };
 		DCC7D3CE27717C430016B379 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCC7D3FA2771C9100016B379 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		DCD6AABF2775563500622B8A /* CannotCheckInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannotCheckInButton.swift; sourceTree = "<group>"; };
 		DCDCC02D277138BB00CE42CD /* GranoffRooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GranoffRooms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDCC030277138BB00CE42CD /* GranoffRoomsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GranoffRoomsApp.swift; sourceTree = "<group>"; };
 		DCDCC032277138BB00CE42CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -163,9 +159,7 @@
 			children = (
 				DCC155722774325C0047F6A9 /* NavigationBarViews.swift */,
 				DCF3615B277149AC00FC3E9C /* CheckinButton.swift */,
-				DCA18F70277B4A8900AF27AB /* OccupiedButton.swift */,
 				DCF361592771410E00FC3E9C /* Icon.swift */,
-				DCD6AABF2775563500622B8A /* CannotCheckInButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -441,9 +435,7 @@
 				DCF3615A2771410E00FC3E9C /* Icon.swift in Sources */,
 				DC48C5C22771595400C2267E /* Room.swift in Sources */,
 				DC48C5D12771608C00C2267E /* RoomList.swift in Sources */,
-				DCD6AAC02775563600622B8A /* CannotCheckInButton.swift in Sources */,
 				DCC7D3FB2771C9110016B379 /* SignInView.swift in Sources */,
-				DCA18F71277B4A8A00AF27AB /* OccupiedButton.swift in Sources */,
 				DC48C5CD27715BE900C2267E /* RoomRow.swift in Sources */,
 				DCC155732774325C0047F6A9 /* NavigationBarViews.swift in Sources */,
 				DCBC36EB277305000050E0CF /* ScreenDimensions.swift in Sources */,

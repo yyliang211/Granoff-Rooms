@@ -28,7 +28,7 @@ struct SignInView: View {
                 // Login title
                 Text("GranoffRooms")
                     .foregroundColor(colorScheme == .light ? Color.black : Color.white)
-                    .font(Font.custom("CircularStd-Medium", size: 32))
+                    .font(Font.custom("CircularStd-Medium", size: 23))
                 
                 Spacer()
                 
@@ -40,7 +40,6 @@ struct SignInView: View {
                   .frame(idealHeight: 0.3 * ScreenDimensions.height)
                   .fixedSize()
             }
-//            .background(Color.black)
             .alert(isPresented: $user.alert, content: {
               Alert(
                 title: Text("Message"),

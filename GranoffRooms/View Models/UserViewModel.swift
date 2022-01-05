@@ -18,6 +18,7 @@ class UserViewModel: ObservableObject {
     private var db = Firestore.firestore()
     private var listener: ListenerRegistration?
     var roomID = ""
+    var deviceName = ""
     
     init() {
         guard let uid = getCurrentUserID() else { return }
@@ -65,12 +66,16 @@ class UserViewModel: ObservableObject {
     func checkIn(roomNumber: String) {
         self.roomID = roomNumber
         self.isCheckedIn = true
-        storeUserInformation(roomID: roomNumber, isCheckedIn: true)
+        self.deviceName = UIDevice.current.name
+        storeUserInformation(roomID: roomNumber, isCheckedIn: true, deviceName: deviceName)
         
         let uid = getCurrentUserID()
+        let deviceName = UIDevice.current.name
         if let uid = uid {
-            db.collection("rooms").document(roomID).updateData(["uid": uid]) { err in
+            db.collection("rooms").document(roomID).updateData(["uid": uid, "deviceName": deviceName]) { err in
                 if let err = err {
+                    self.alertMessage = err.localizedDescription
+                    self.alert.toggle()
                     print("Error updating uid in room document \(err)")
                 } else {
                     print("Room document uid successfully updated")
@@ -80,8 +85,10 @@ class UserViewModel: ObservableObject {
     }
     
     func checkOut() {
-        db.collection("rooms").document(roomID).updateData(["uid": "none"]) { err in
+        db.collection("rooms").document(roomID).updateData(["uid": "", "deviceName": ""]) { err in
             if let err = err {
+                self.alertMessage = err.localizedDescription
+                self.alert.toggle()
                 print("Error updating uid in room document \(err)")
             } else {
                 print("Room document uid successfully updated")
@@ -90,7 +97,8 @@ class UserViewModel: ObservableObject {
         
         self.roomID = ""
         self.isCheckedIn = false
-        storeUserInformation(roomID: "", isCheckedIn: false)
+        self.deviceName = ""
+        storeUserInformation(roomID: "", isCheckedIn: false, deviceName: "")
     }
     
     func getUserID() -> String {
@@ -114,11 +122,13 @@ class UserViewModel: ObservableObject {
         }
     }
     
-    private func storeUserInformation(roomID: String, isCheckedIn: Bool) {
+    private func storeUserInformation(roomID: String, isCheckedIn: Bool, deviceName: String) {
         guard let uid = getCurrentUserID() else { return }
-        let userData: [String: Any] = ["uid": uid, "roomID": roomID, "isCheckedIn": isCheckedIn]
+        let userData: [String: Any] = ["uid": uid, "roomID": roomID, "isCheckedIn": isCheckedIn, "deviceName": deviceName]
         db.collection("users").document(uid).setData(userData, merge: true) { err in
                 if let err = err {
+                    self.alertMessage = err.localizedDescription
+                    self.alert.toggle()
                     print(err)
                     return
                 }

@@ -22,6 +22,11 @@ class RoomListViewModel: ObservableObject {
     deinit {
         unsubscribe()
     }
+    
+    private func showAlertMessage(message: String) {
+      alertMessage = message
+      alert.toggle()
+    }
 
     func unsubscribe() {
         if listener != nil {
@@ -40,6 +45,7 @@ class RoomListViewModel: ObservableObject {
         if listener == nil {
             listener = query.addSnapshotListener { [weak self] querySnapshot, error in
                 guard let documents = querySnapshot?.documents else {
+                    self?.showAlertMessage(message: error?.localizedDescription ?? "Error fetching roomlist")
                     print("Error fetching documents: \(error!)")
                     return
                 }
@@ -51,6 +57,7 @@ class RoomListViewModel: ObservableObject {
                         room?.reference = document.reference
                         return room
                     } catch {
+                        self.showAlertMessage(message: error.localizedDescription)
                         print(error)
                         return nil
                     }
@@ -78,12 +85,6 @@ class RoomListViewModel: ObservableObject {
         }
 
         return filteredQuery.order(by: "avail", descending: true).order(by: "name")
-    }
-    
-    // function called when error occurs
-    private func showAlertMessage(message: String) {
-        alertMessage = message
-        alert.toggle()
     }
 
     private func getCurrentUserID() -> String? {
