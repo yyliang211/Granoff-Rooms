@@ -97,8 +97,7 @@ class UserViewModel: ObservableObject {
         
         self.roomID = ""
         self.isCheckedIn = false
-        self.deviceName = ""
-        storeUserInformation(roomID: "", isCheckedIn: false, deviceName: "")
+        storeUserInformation(roomID: "", isCheckedIn: false, deviceName: deviceName)
     }
     
     func getUserID() -> String {
